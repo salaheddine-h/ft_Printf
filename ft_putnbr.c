@@ -12,18 +12,17 @@
 
 #include "ft_printf.h"
 
-void	ft_putnbr(int nbr)
+void	ft_putnbr(int nbr, int *len)
 {
-	if (nbr < 0)
+	long	n;
+
+	n = nbr;
+	if (n < 0)
 	{
-		ft_putchar('-');
-		nbr = -nbr;
+		ft_putchar('-', len);
+		n = -n;
 	}
-	if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-		ft_putchar(nbr + 48);
+	if (n >= 10)
+		ft_putnbr((n / 10), len);
+	ft_putchar((n % 10 + '0'), len);
 }
