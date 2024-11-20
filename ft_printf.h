@@ -17,8 +17,8 @@
 # include <unistd.h>
 
 int	ft_printf(const char *, ...); ////
-void	ft_putstr(char *str);
-void	ft_putnbr(int n);
-void	ft_putchar(char c);
+int  ft_putstr(char *str);
+int  ft_putnbr(int n);
+int  ft_putchar(char c);
 
 #endif
