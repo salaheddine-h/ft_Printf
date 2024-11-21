@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 13:15:50 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/21 13:45:02 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/21 17:59:12 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	to_hex(unsigned long add, char *format, int *len)
 
 void	ft_putadd(void *p, int *len)
 {
-	unsigned long add;
+	unsigned long	add;
 
 	add = (unsigned long)p;
 	if (add == 0)
