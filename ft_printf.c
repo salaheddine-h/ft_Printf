@@ -6,11 +6,11 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 17:55:19 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/19 18:50:35 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/21 13:45:50 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
 static void	ft_format(va_list args, const char format, int *len)
 {
@@ -40,7 +40,7 @@ int	ft_printf(const char *str, ...)
 
 	i = 0;
 	len = 0;
-	if (!str)
+	if (!str || write(1 ,"", 0) == -1)
 		return (-1);
 	va_start(args, str);
 	while (str[i])
@@ -56,4 +56,10 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (len);
+}
+
+int main()
+{
+	void *ptr = 0;
+	printf("%p\n", ptr);
 }

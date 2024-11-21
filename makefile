@@ -6,7 +6,7 @@
 #    By: salhali <salhali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/17 17:46:39 by salhali           #+#    #+#              #
-#    Updated: 2024/11/19 13:29:37 by salhali          ###   ########.fr        #
+#    Updated: 2024/11/21 13:22:58 by salhali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,9 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f 
 
-C_src = ft_printf.c ft_putchar.c ft_putnbr.c
+C_src = ft_printf.c ft_putchar.c ft_putnbr.c ft_puthex.c ft_putunbr.c ft_putadd.c ft_putstr.c
 
-O_bjc = ft_printf.o ft_putchar.o ft_putstr.o 
+O_bjc = ft_printf.o ft_putchar.o ft_putnbr.o ft_puthex.o ft_putunbr.o ft_putadd.o ft_putstr.o
 
 all : $(NAME)
 
