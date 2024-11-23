@@ -12,8 +12,9 @@
 
 #include "ft_printf.h"
 
-static void	ft_format(va_list args, const char format, int *len)
+static void	ft_format(const char format, int *len)
 {
+	va_list args;
 	if (format == 'c')
 		ft_putchar(va_arg(args, int), len); //char
 	else if (format == 's')
