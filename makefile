@@ -6,7 +6,7 @@
 #    By: salhali <salhali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/17 17:46:39 by salhali           #+#    #+#              #
-#    Updated: 2024/11/21 13:22:58 by salhali          ###   ########.fr        #
+#    Updated: 2024/11/27 15:32:21 by salhali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ cc = cc
 
 CFLAGS = -Wall -Wextra -Werror 
 
-RM = rm -f 
+RM = rm -rf 
 
 C_src = ft_printf.c ft_putchar.c ft_putnbr.c ft_puthex.c ft_putunbr.c ft_putadd.c ft_putstr.c
 
