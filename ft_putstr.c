@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
+/*   By: salhali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 14:33:41 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/18 18:44:48 by salhali          ###   ########.fr       */
+/*   Created: 2024/11/28 11:45:41 by salhali           #+#    #+#             */
+/*   Updated: 2024/11/28 13:01:13 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putstr(char *str, int *len)
 {
+	int	i;
+	
+	i = 0;
 	if (!str)
 	{
 		write(1, "(null)", 6);
@@ -21,10 +24,10 @@ void	ft_putstr(char *str, int *len)
 	}
 	else
 	{
-		while (*str)
+		while (str[i])
 		{
-			ft_putchar(*str, len);
-			str++;
+			ft_putchar(str[i], len);
+			i++;
 		}
 	}
 }

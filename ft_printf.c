@@ -6,13 +6,13 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 17:55:19 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/27 18:25:32 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/28 14:25:32 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_format(va_list args, const char format, int *len)
+static void	ft_format(va_list args,char format, int *len)
 {
 	if (format == 'c')
 		ft_putchar(va_arg(args, int), len);
@@ -45,12 +45,12 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	while (str[i])
 	{
-		if (str[i] == '%')
+		if (str[i] == '%' && str[i +1] == '\0')
+			return -1;
+		else if  (str[i] == '%')
 		{
-			if (str[i +1] == '\0')
-				return(-1);
 			i++;
-			ft_format(args, str[i], &len);
+			ft_format(args, str[i] ,&len);
 		}
 		else
 			ft_putchar(str[i], &len);
@@ -59,10 +59,5 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-int main()
-{
-	ft_printf("%%%", 666);
-//	printf("%");
-    return (0);
-}
+
 

@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 13:15:50 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/27 18:04:57 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/28 12:53:59 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putadd(void *p, int *len)
 
 	add = (unsigned long)p;
 	if (add == 0)
-		ft_putstr("0x0", len);
+		ft_putstr("(nil)", len);
 	else
 	{
 		ft_putstr("0x", len);
